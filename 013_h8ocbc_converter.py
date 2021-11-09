@@ -1,4 +1,9 @@
 def celc_and_kelv(temp, to):
+	'''
+	This function is for converting celcius to kelvin or otherwise
+	Input: temp = temperature to convert, to = convert to celcius or kelvin (use 'c' or 'k')
+	Output: converted temperature
+	'''
     if(to.lower() == 'c'):
         print(f'{temp} K = {temp - 273} C')
         return temp - 273
@@ -7,6 +12,11 @@ def celc_and_kelv(temp, to):
         return temp + 273
 
 def to_fahrenheit(temp, inp):
+	'''
+	This function is for converting celcius or kelvin to fahrenheit
+	Input: temp = temperature to convert, inp = from celcius or kelvin (use 'c' or 'k')
+	Output: converted fahrenheit temperature
+	'''
     if(inp == 'k'):
         temp2 = celc_and_kelv(temp, 'c')
         temp2 = temp2 * 9/5 + 32
@@ -18,6 +28,11 @@ def to_fahrenheit(temp, inp):
         return temp2
 
 def from_fahrenheit(temp, outp):
+	'''
+	This function is for converting fahrenheit to celcius or kelvin
+	Input: temp = temperature to convert, outp = convert to celcius or kelvin (use 'c' or 'k')
+	Output: converted fahrenheit temperature
+	'''
     if(outp == 'k'):
         temp2 = (temp - 32) * 5/9
         temp2 = celc_and_kelv(temp2, 'k')
